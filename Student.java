@@ -70,3 +70,24 @@ class Student {
         return false;
     }
 }
+
+class Course{
+    List<Student> studenti;
+
+    public void addStudent(Student nov){
+        studenti.add(nov);
+    }
+    public void removeStudent(Student otpisan){
+        studenti.remove(otpisan);
+    }
+
+    public double averageAll(){
+        double average = 0;
+        double sum = 0;
+        for(Student s: studenti){
+            sum += s.getAverage();
+        }
+        average = sum/studenti.size();
+        return average;
+    }
+}
