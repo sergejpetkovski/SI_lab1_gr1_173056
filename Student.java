@@ -55,7 +55,7 @@ class Student {
         //TODO
         int suma = 0;
         double prosek = 0;
-        for(i=0; i<labPoints.size(); i++){
+        for(int i=0; i<labPoints.size(); i++){
             suma += labPoints.get(i);
         }
         prosek = suma / labPoints.size();
@@ -67,5 +67,6 @@ class Student {
         if(labPoints.size() > 8){
             return true;
         }
+        return false;
     }
 }
